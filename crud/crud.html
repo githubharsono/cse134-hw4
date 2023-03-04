@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" /> <!-- utf-8 = ascii -->
+	<meta name="description" content="Portfolio for Ryan Harsono" />
+	<meta name="keywords" content="Ryan, Harsono, UC San Diego" />
+	<meta name="author" content="Ryan Harsono" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- responsive scaling -->
+	<title>Simple CRUD</title> <!-- title = tab bar title -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js"></script>
+</head>
+
+<body>
+	<h1>Simple Blog CRUD</h1>
+
+	<ul id="blog"></ul>
+
+	<button id="addPostButton">Add Post</button>
+
+	<dialog id="addPostDialog">
+		<form method="dialog">
+			<label for="postTitle">Post Title:</label><br>
+			<input name="postTitle" id="postTitle"></input><br>
+			<label for="postDate">Post Date:</label><br>
+			<input name="postDate" id="postDate"></input><br>
+			<label for="postSummary">Post Summary:</label><br>
+			<textarea name="postSummary" id="postSummary"></textarea>
+
+			<button id="postCancel">Cancel</button>
+			<button id="postSave">Save</button>
+		</form>
+	</dialog>
+
+	<dialog id="editPostDialog">
+		<form method="dialog">
+			<label for="editPostTitle">Post Title:</label><br>
+			<input name="editPostTitle" id="editPostTitle"></input><br>
+			<label for="editPostDate">Post Date:</label><br>
+			<input name="editPostDate" id="editPostDate"></input><br>
+			<label for="editPostSummary">Post Summary:</label><br>
+			<textarea name="editPostSummary" id="editPostSummary"></textarea>
+
+			<button id="editPostCancel">Cancel</button>
+			<button id="editPostSave">Save</button>
+		</form>
+	</dialog>
+
+	<dialog id="deletePostDialog">
+		<p>Delete post?</p>
+		<form method="dialog">
+			<button id="deleteCancel">Cancel</button>
+			<button id="deleteOk">Ok</button>
+		</form>
+	</dialog>
+
+	<script type="module">
+		import { showAddPostDialog } from './blog.js';
+
+		window.addEventListener('DOMContentLoaded', init);
+
+		function init(){
+			addPostButton.addEventListener("click", showAddPostDialog);
+		}
+	</script>
+
+</body>
+
+</html>

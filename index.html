@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="main.css" media="screen" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<head>
+	<meta charset="utf-8" /> <!-- utf-8 = ascii -->
+	<meta name="description" content="Portfolio for Ryan Harsono" />
+	<meta name="keywords" content="Ryan, Harsono, UC San Diego" />
+	<meta name="author" content="Ryan Harsono" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- responsive scaling -->
+	<title>Ryan's Website</title> <!-- title = tab bar title -->
+	<link href="images/titleicon.png" rel="icon" />
+	<script>
+
+	</script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<picture id="pfp">
+			<source media="(max-width:1024px)" srcset="images/olderhs.jpg">
+			<img id="mainpfp" src="images/oldhs.jpg" alt="profile photo" />
+		</picture>
+		
+		<h1>Ryan Harsono</h1>
+
+		<nav>
+			<a id="about" class="active" href="index.html">About Me</a>
+			<a id="exp" href="experience.html">Experience</a>
+			<a id="inte" href="interests.html">Interests</a>
+			<a id="proj" href="projects.html">Projects</a>
+			<a id="native dialogs" href="nativedialogs.html">Native Dialogs</a>
+			<a id="custom dialogs" href="./customdialog/customdialog.html">Custom Dialog</a>
+			<a id="crud" href="./crud/crud.html">CRUD</a>
+		</nav>
+	</header>
+
+	<main> <!-- main is content, not nav bar, header, footer, etc. -->
+		<section>
+			<h2>About Me</h2>
+			<p>My name is <span>Ryan Harsono</span>. Originally from San Francisco, I'm now studying Cognitive Science and Computer Science at UC San Diego. My favorite courses are those that are the most challenging, which frequently happen to involve math and <code>coding</code>. 
+
+			<p><b>Skills: </b>Python, C++, Java, HTML!</p>
+		</section>
+
+		<!-- need JS to style audio controls -->
+		<!--
+		<aside id="pronounciation">
+			<p>Name is pronounced as</p>
+			<audio controls>
+				<source src="av/pronounce.mp3" type="audio/mpeg">
+			</audio>
+		</aside>
+		-->
+
+		<aside id="funfact">
+			<h3>Fun Fact</h3>
+			<p>I think Mufasa from <i>The Lion King</i> is <em>very</em> attractive!</p>
+		</aside>
+
+	</main>
+
+	<hr>
+
+	<footer>
+		<p>Copyright Ryan Harsono</p>
+	</footer>
+
+</body>

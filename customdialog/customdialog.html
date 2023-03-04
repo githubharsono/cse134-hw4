@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" /> <!-- utf-8 = ascii -->
+	<meta name="description" content="Portfolio for Ryan Harsono" />
+	<meta name="keywords" content="Ryan, Harsono, UC San Diego" />
+	<meta name="author" content="Ryan Harsono" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- responsive scaling -->
+	<title>Custom Dialogs</title> <!-- title = tab bar title -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js"></script>
+</head>
+
+<body>
+	<button id="alertButton">Alert</button>
+	<button id="confirmButton">Confirm</button>
+	<button id="promptButton">Prompt</button>
+
+	<hr>
+	<output id="output"></output>
+
+	<dialog id="alertDialog">
+		<p>Alert pressed!</p>
+		<form method="dialog">
+			<button>Ok</button>
+		</form>
+	</dialog>
+
+	<dialog id="confirmDialog">
+		<p>Do you confirm this?</p>
+		<form method="dialog">
+			<button id="confirmCancel">Cancel</button>
+			<button id="confirmOk">Ok</button>
+		</form>
+	</dialog>
+
+	<dialog id="promptDialog">
+		<p>What is your name?</p>
+		<form method="dialog">
+			<input type="text" id="promptInput">
+			<button id="promptCancel">Cancel</button>
+			<button id="promptOk">Ok</button>
+		</form>
+	</dialog>
+
+	<script type="module">
+		import { showAlertDialog, showConfirmDialog, showPromptDialog } from './customdialog.js';
+
+		window.addEventListener('DOMContentLoaded', init);
+
+		function init(){
+			alertButton.addEventListener("click", showAlertDialog);
+			confirmButton.addEventListener("click", showConfirmDialog);
+			promptButton.addEventListener("click", showPromptDialog);
+		}
+	</script>
+
+</body>
+
+</html>
